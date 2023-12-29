@@ -23,8 +23,7 @@
 
         h1 {
             font-size: 2em;
-            margin-bottom: 20px
-
+            margin-bottom: 20px;
         }
 
         p {
@@ -54,11 +53,26 @@
             right: 10px;
             font-size: 1em;
             color: #333;
+            font-style: italic; /* Adicionado para tornar o texto em itálico */
         }
     </style>
 </head>
 <body>
-    
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const footerText = document.querySelector('.footer-text');
+        let dotsCount = 0;
+
+        function updateDots() {
+            footerText.textContent = 'Em breve' + '.'.repeat(dotsCount);
+            dotsCount = (dotsCount + 1) % 4;
+        }
+
+        setInterval(updateDots, 500); // Atualizar os pontos a cada 500 milissegundos (0,5 segundos)
+    });
+</script>
+
 <div class="container">
     <h1>Em breve</h1>
     <p>Estamos trabalhando em algo incrível. Fique ligado!</p>
@@ -70,7 +84,7 @@
     <a href="https://www.instagram.com/inovarp.mta" target="_blank">
         <i class="fab fa-instagram instagram-icon"></i> Siga-nos no Instagram
     </a>
-    <div class="footer-text">Inovação em sua experiência virtual.</div>
+    <div class="footer-text">Em breve</div>
 </div>
 
 </body>
