@@ -24,6 +24,24 @@
         h1 {
             font-size: 2em;
             margin-bottom: 20px;
+            white-space: nowrap; /* Impede a quebra de linha para manter os pontos na mesma linha */
+            overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse a largura da caixa */
+            animation: loadingDots 1s infinite; /* Adiciona uma animação para os pontos */
+        }
+
+        @keyframes loadingDots {
+            0%, 20% {
+                content: "Em breve";
+            }
+            40% {
+                content: "Em breve.";
+            }
+            60% {
+                content: "Em breve..";
+            }
+            80%, 100% {
+                content: "Em breve...";
+            }
         }
 
         p {
@@ -59,22 +77,8 @@
 </head>
 <body>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const footerText = document.querySelector('.footer-text');
-        let dotsCount = 0;
-
-        function updateDots() {
-            footerText.textContent = 'Em breve' + '.'.repeat(dotsCount);
-            dotsCount = (dotsCount + 1) % 4;
-        }
-
-        setInterval(updateDots, 500); // Atualizar os pontos a cada 500 milissegundos (0,5 segundos)
-    });
-</script>
-
 <div class="container">
-    <h1>Em breve</h1>
+    <h1></h1> <!-- Mantido vazio para ser preenchido pela animação -->
     <p>Estamos trabalhando em algo incrível. Fique ligado!</p>
     <a href="https://discord.com/invite/DqEX9Crxaj" target="_blank">
         <i class="fab fa-discord discord-icon"></i> Participe do Discord
@@ -84,7 +88,7 @@
     <a href="https://www.instagram.com/inovarp.mta" target="_blank">
         <i class="fab fa-instagram instagram-icon"></i> Siga-nos no Instagram
     </a>
-    <div class="footer-text">Em breve</div>
+    <div class="footer-text">Inovação em sua experiência virtual.</div>
 </div>
 
 </body>
