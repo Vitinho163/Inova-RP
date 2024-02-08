@@ -4,74 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./assets/white-black.ico" type="image/x-icon">
     <title>Inova Roleplay</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-
-        .container {
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.2em;
-            margin-bottom: 40px;
-        }
-
-        a {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            text-decoration: none;
-            color: #fff;
-            background-color: #007BFF;
-            border-radius: 5px;
-            margin-bottom: 10px; /* Adicionado para espaçamento */
-        }
-
-        .discord-icon,
-        .instagram-icon {
-            margin-right: 10px;
-        }
-
-        .footer-text {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            font-size: 1em;
-            color: #333;
-            font-style: italic; /* Adicionado para tornar o texto em itálico */
-        }
-    </style>
 </head>
 <body>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const footerText = document.querySelector('h1');
-        let dotsCount = 0;
-
-        function updateDots() {
-            footerText.textContent = 'Em breve' + '.'.repeat(dotsCount);
-            dotsCount = (dotsCount + 1) % 4;
-        }
-
-        setInterval(updateDots, 500); // Atualizar os pontos a cada 500 milissegundos (0,5 segundos)
-    });
-</script>
 
 <div class="container">
     <h1>Em breve</h1>
@@ -86,6 +23,8 @@
     </a>
     <div class="footer-text">Inovação em sua experiência virtual.</div>
 </div>
+
+<script src="./js/index.js"></script>
 
 </body>
 </html>
